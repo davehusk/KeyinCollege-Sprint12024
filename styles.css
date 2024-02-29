@@ -1,0 +1,181 @@
+/* General Styles */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url(back.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+[tabindex="-1"] {
+	pointer-events: none;
+}
+
+/* Header Styles */
+#header {
+	background-color: var(--primaryColor);
+	height: 9rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header h1 {
+	color: white;
+	font-weight: normal;
+	font-size: 3rem;
+}
+
+/* Main Content Styles */
+#mainContent {
+	max-width: 72rem;
+	margin: 0 auto;
+	padding: 2rem;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 1rem; 
+}
+
+#logoContainer {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+#logoContainer img {
+	height: 10rem;
+	margin-bottom: 1rem;
+}
+
+#servicesSection {
+	margin-bottom: 3rem;
+}
+
+#servicesSection h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: var(--secondaryColor);
+}
+
+#servicesList {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 2rem;
+}
+
+.serviceItem {
+	border: 1px solid var(--lightGray);
+	padding: 1.5rem;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+}
+
+.serviceItem::before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background-color: var(--primaryColor);
+	opacity: 0.2;
+	transform: rotate(-45deg) translateZ(0);
+	transition: opacity 0.3s ease-in-out;
+}
+
+.serviceItem:hover::before {
+	opacity: 0.5;
+}
+
+.serviceItem:focus-within::before {
+	opacity: 0.5;
+}
+
+.serviceIcon {
+	color: var(--primaryColor);
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.serviceItem h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.serviceItem p {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+/* Footer Styles */
+#footer {
+	background-color: var(--primaryColor);
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+/* Services Page Styles */
+#servicesPage {
+	max-width: 72rem;
+	margin: 0 auto;
+	padding: 2rem;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 1rem; 
+}
+
+#servicesPage h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: var(--secondaryColor);
+}
+
+#servicesPage p {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+/* Contact Info Styles */
+#contactInfo {
+	max-width: 72rem;
+	margin: 0 auto;
+	padding: 2rem;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 1rem; 
+}
+
+#contactInfo h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: var(--secondaryColor);
+}
+
+#contactInfo p {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
